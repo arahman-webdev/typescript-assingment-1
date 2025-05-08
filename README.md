@@ -1,6 +1,6 @@
 # What are some differences between interfaces and types in TypeScript?
 
-# In typescript, both interfaces and types are used to define the shape of an object. But they have some key difference.
+ In typescript, both interfaces and types are used to define the shape of an object. But they have some key difference.
 
 # About Interface
 
