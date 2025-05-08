@@ -129,9 +129,56 @@
     { name: "Bag", price: 50 }
   ];
   
-  const result = getMostExpensiveProduct(products);
-  console.log(result);
+  // const result = getMostExpensiveProduct(products);
+  // console.log(result);
   
+
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+  }
+
+  function getDayType(day: Day): string{
+    if(day === Day.Sunday || day === Day.Saturday){
+      return "Weekend"
+    }else{
+      return "Weekday"
+    }
+  }
+
+
+//  const resutl =  getDayType(Day.Sunday)
+
+//  console.log(resutl)
+
+
+function delay() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+    
+
+
+async function squareAsync(n: number): Promise<number>{
+  if(n <0){
+    throw new Error ('Error: Negative number not allowed')
+  }
+  await delay();
+
+  return n*n
+}
+
+// squareAsync(4).then(console.log);
+squareAsync(-3).catch(console.error); 
+
 
 
 }
