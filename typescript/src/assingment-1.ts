@@ -1,5 +1,5 @@
 {
-  // 
+
 
 
   function formatString(write: string, toUpper?: boolean): string {
@@ -10,7 +10,7 @@
     }
   }
 
-     console.log(formatString('Hello', true))
+   
 
 
 
