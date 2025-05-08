@@ -10,26 +10,10 @@
     }
   }
 
-  //    console.log(formatString(''))
+     console.log(formatString('Hello', true))
 
 
-  // type Product = {
-  //     name: string;
-  //     price: number
-  // }
 
-  // const products: Product[] = [
-  //     { name: "Phone", price: 900 },
-  //     { name: "Laptop", price: 1500 },
-  //     { name: "Tablet", price: 1100 },
-  //   ];
-
-
-  //   function getExpensiveProducts(): Product[]{
-  //     return products.filter(item => item.price >= 1000)
-  //   }
-
-  //   console.log(getExpensiveProducts())
 
 
 
@@ -44,10 +28,10 @@
   ];
 
 
-  // console.log(filterByRating(books))
 
 
-  // type GenericArray<param> = Array<param>
+
+ 
 
 
 
@@ -55,10 +39,14 @@
     return ([] as T[]).concat(...elements)
   }
 
+  const result1 = concatenateArrays(["a", "b"], ["c"])
+  const result2 = concatenateArrays(["a", "b"], ["c"])
 
-  // console.log(concatenateArrays([1, 2], [3, 4], [5]))
-  // console.log(concatenateArrays(concatenateArrays(["a", "b"], ["c"])))
-  // console.log(concatenateArrays([false], [true]))
+
+
+
+
+
 
   class Vehicle {
     private make: string;
@@ -70,7 +58,7 @@
     }
 
     getInfo() {
-      console.log(`"Make: ${this.make}, Year: ${this.year}"`)
+      console.log(`Make: ${this.make}, Year: ${this.year}`)
     }
   }
 
@@ -83,15 +71,16 @@
     }
 
     getModel() {
-      console.log(`"Model: ${this.model}"`)
+      console.log(`Model: ${this.model}`)
     }
   }
 
 
   const myCar = new Car("Toyota", 2020, "Corolla")
 
-  // myCar.getInfo()
-  // myCar.getModel()
+
+
+
 
 
   function processValue(a: string | number) {
@@ -102,8 +91,7 @@
     }
   }
 
-  // processValue('Abdurrahman')
-  // processValue(25)
+
 
 
 
@@ -124,13 +112,12 @@
   }
   
   const products = [
-    { name: "Pen", price: 1 },
-    { name: "Notebook", price: 205 },
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 }
   ];
   
-  // const result = getMostExpensiveProduct(products);
-  // console.log(result);
+ 
   
 
   enum Day {
@@ -152,16 +139,16 @@
   }
 
 
-//  const resutl =  getDayType(Day.Sunday)
+ 
 
-//  console.log(resutl)
+
 
 
 function delay() {
-  return new Promise((resolve) => {
+  return new Promise((done) => {
     setTimeout(() => {
-      resolve("resolved");
-    }, 2000);
+      done("done");
+    }, 1000);
   });
 }
     
@@ -176,8 +163,7 @@ async function squareAsync(n: number): Promise<number>{
   return n*n
 }
 
-// squareAsync(4).then(console.log);
-squareAsync(-3).catch(console.error); 
+
 
 
 
