@@ -1,6 +1,5 @@
+
 {
-
-
 
   function formatString(write: string, toUpper?: boolean): string {
     if (toUpper === false) {
@@ -10,7 +9,7 @@
     }
   }
 
-   
+
 
 
 
@@ -31,7 +30,7 @@
 
 
 
- 
+
 
 
 
@@ -63,7 +62,7 @@
   }
 
   class Car extends Vehicle {
-    model: string;
+    private model: string;
 
     constructor(make: string, year: number, model: string) {
       super(make, year)
@@ -77,6 +76,8 @@
 
 
   const myCar = new Car("Toyota", 2020, "Corolla")
+
+  // console.log(myCar)
 
 
 
@@ -99,26 +100,25 @@
     name: string;
     price: number;
   }
-  
+
   function getMostExpensiveProduct(products: Product[]): Product | null {
     if (products.length === 0) {
-      return null; 
+      return null;
     }
-  
+
     const maxPrice = Math.max(...products.map(product => product.price));
     const highest_price = products.find(product => product.price === maxPrice);
-  
-    return highest_price ;
+    return highest_price ?? null;
   }
-  
+
   const products = [
     { name: "Pen", price: 10 },
     { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 }
   ];
-  
- 
-  
+
+
+
 
   enum Day {
     Monday,
@@ -130,38 +130,38 @@
     Sunday
   }
 
-  function getDayType(day: Day): string{
-    if(day === Day.Sunday || day === Day.Saturday){
+  function getDayType(day: Day): string {
+    if (day === Day.Sunday || day === Day.Saturday) {
       return "Weekend"
-    }else{
+    } else {
       return "Weekday"
     }
   }
 
 
- 
 
 
 
 
-function delay() {
-  return new Promise((done) => {
-    setTimeout(() => {
-      done("done");
-    }, 1000);
-  });
-}
-    
 
-
-async function squareAsync(n: number): Promise<number>{
-  if(n <0){
-    throw new Error ('Error: Negative number not allowed')
+  function delay() {
+    return new Promise((done) => {
+      setTimeout(() => {
+        done("done");
+      }, 1000);
+    });
   }
-  await delay();
 
-  return n*n
-}
+
+
+  async function squareAsync(n: number): Promise<number> {
+    if (n < 0) {
+      throw new Error('Error: Negative number not allowed')
+    }
+    await delay();
+
+    return n * n
+  }
 
 
 
