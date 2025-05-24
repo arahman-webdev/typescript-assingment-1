@@ -77,7 +77,7 @@
 
   const myCar = new Car("Toyota", 2020, "Corolla")
 
-  // console.log(myCar)
+myCar.getModel()
 
 
 
