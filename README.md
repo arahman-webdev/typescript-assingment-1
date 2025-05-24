@@ -21,9 +21,9 @@ Both interface and type allow you to describe the shape of data — such as obje
 
 # About Types
 
-1. Used to define a wide variety of types:
+1. Used to define many kinds of types:
     The type alias can represent not only the shape of objects but also primitive types (like string or number), union types (e.g., string | number), intersection types (combining multiple types), tuples, and more. This flexibility makes type very versatile for complex type definitions.
-2. Supports extension using intersection (&):
+2. extended using intersection (&):
     You can combine or extend types by using the intersection operator (&). This allows you to create new types by merging properties from multiple existing types.
 3. Cannot be merged like interfaces:
     Unlike interfaces, type aliases do not support declaration merging. If you declare the same type name multiple times, TypeScript will throw an error. This ensures that type definitions are explicit and unambiguous.
@@ -52,6 +52,6 @@ One of the most significant advantages of TypeScript is its type system. Unlike 
 Type annotations in TypeScript serve as a form of documentation. They make the code more readable and easier to understand, especially for new team members or when revisiting code after a long time. 
 
 
-# Robust Code Organization:
+# 4. Robust Code Organization:
 
 TypeScript encourages modular code organization through its support for ES6 modules and namespaces. This modularity improves code maintainability by allowing developers to break down large codebases into smaller, manageable pieces. It also promotes code reuse and better encapsulation
